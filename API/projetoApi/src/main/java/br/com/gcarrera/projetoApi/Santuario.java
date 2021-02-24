@@ -7,22 +7,22 @@ public class Santuario {
 
     List<Personagem> lista;
 
-//    public Santuario() {
-//        lista = ArrayList<Personagem>;
-//    }
+    public Santuario() {
+        lista =  new ArrayList<Personagem>();
+    }
 
-//    public void adiocinaSantuario(Personagem personagem){
-//        lista.add(personagem);
-//    }
-//
-//    public void deletaSantuario(Personagem personagem){
-//        lista.remove(personagem);
-//    }
-//
-//    public void exibeSantuario(){
-//        for (Personagem personagem: lista) {
-//            System.out.println(personagem);
-//        }
-//    }
-//
+    public void adiocinaSantuario(Personagem personagem) {
+        lista.add(personagem);
+    }
+
+    public void deletaSantuario(Personagem personagem) {
+        lista.remove(personagem);
+    }
+
+    public void exibeSantuario() {
+        for (Personagem personagem : lista) {
+            System.out.println(personagem);
+        }
+    }
+
 }

@@ -87,7 +87,8 @@ public class Deus implements Personagem {
     }
 
     //Construtor
-    public Deus(String nome, Double nonoSentido, Double velocidadeSom, Double velocidadeObjeto, Integer batalhasVencidas, Integer batalhasPerdidas, Integer guerrasVencidas, Integer guerrasPerdidas) {
+    public Deus(String nome, Double nonoSentido, Double velocidadeSom, Double velocidadeObjeto,
+                Integer batalhasVencidas, Integer batalhasPerdidas, Integer guerrasVencidas, Integer guerrasPerdidas) {
         this.nome = nome;
         this.artefato = false;
         this.nonoSentido = nonoSentido;
@@ -109,7 +110,8 @@ public class Deus implements Personagem {
         } else {
             artefato = true;
             resultado = resultado + nonoSentido;
-            System.out.println("O Deus(a) " + nome + " utilizando um artefato e tem o poder de cosmo equivalente a " + resultado + "%.");
+            System.out.println("O Deus(a) " + nome + " utilizando um artefato e tem o poder de cosmo equivalente a "
+                    + resultado + "%.");
             return resultado;
         }
     }
@@ -127,18 +129,4 @@ public class Deus implements Personagem {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Deus{" +
-                "nome='" + nome + '\'' +
-                ", artefato=" + leitorArtefato() +
-                ", nonoSentido=" + nonoSentido +
-                ", batalhasVencidas=" + batalhasVencidas +
-                ", batalhasPerdidas=" + batalhasPerdidas +
-                ", guerrasVencidas=" + guerrasVencidas +
-                ", guerrasPerdidas=" + guerrasPerdidas +
-                ", forcaCosmo=" + forcaCosmo() +
-                ", poderMach=" + poderMach() +
-                '}';
-    }
 }

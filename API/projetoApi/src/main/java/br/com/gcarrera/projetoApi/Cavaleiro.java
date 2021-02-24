@@ -1,11 +1,16 @@
 package br.com.gcarrera.projetoApi;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 public abstract class Cavaleiro implements Personagem{
 
     //Atributos
     private String nome;
     private String nacionalidade;
     private String dataNascimento;
+    private String constelacao;
     private Boolean bencaoDeus;
     private Integer batalhasVencidas;
     private Integer batalhasPerdidas;
@@ -35,6 +40,14 @@ public abstract class Cavaleiro implements Personagem{
 
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getConstelacao() {
+        return constelacao;
+    }
+
+    public void setConstelacao(String constelacao) {
+        this.constelacao = constelacao;
     }
 
     public Boolean getBencaoDeus() {
@@ -78,10 +91,12 @@ public abstract class Cavaleiro implements Personagem{
     }
 
     //Construtor
-    public Cavaleiro(String nome, String nacionalidade, String dataNascimento, Integer batalhasVencidas, Integer batalhasPerdidas, Double velocidadeSom, Double velocidadeObjeto) {
+    public Cavaleiro(String nome, String nacionalidade, String dataNascimento, String constelacao,
+                     Integer batalhasVencidas, Integer batalhasPerdidas, Double velocidadeSom, Double velocidadeObjeto) {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.dataNascimento = dataNascimento;
+        this.constelacao = constelacao;
         this.bencaoDeus = true;
         this.batalhasVencidas = batalhasVencidas;
         this.batalhasPerdidas = batalhasPerdidas;
@@ -98,16 +113,9 @@ public abstract class Cavaleiro implements Personagem{
             return resultado;
         } else {
             bencaoDeus = true;
-            System.out.println("O(a) cavaleiro(a) " + nome + " obteve ajuda dos deuses, têm o poder de cosmo equivalente a " + resultado + "%.");
+            System.out.println("O(a) cavaleiro(a) " + nome +
+                    " obteve ajuda dos deuses, têm o poder de cosmo equivalente a " + resultado + "%.");
             return resultado;
-        }
-    }
-
-    public String leitorBencaoDeus() {
-        if (bencaoDeus) {
-            return "O(a) cavaleiro(a) " + nome + " foi abençoado pelos deuses.";
-        } else {
-            return "O(a) cavaleiro(a) " + nome + " não foi abençoado pelos deuses.";
         }
     }
 
@@ -116,20 +124,12 @@ public abstract class Cavaleiro implements Personagem{
         return (velocidadeObjeto / velocidadeSom) * 1.35;
     }
 
-    @Override
-    public String toString() {
-        return "Cavaleiro{" +
-                "nome='" + nome + '\'' +
-                ", nacionalidade='" + nacionalidade + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", bencaoDeus=" + leitorBencaoDeus() +
-                ", batalhasVencidas=" + batalhasVencidas +
-                ", batalhasPerdidas=" + batalhasPerdidas +
-                ", velocidadeSom=" + velocidadeSom +
-                ", velocidadeObjeto=" + velocidadeObjeto +
-                ", forcaCosmo=" + forcaCosmo() +
-                ", poderMach=" + poderMach() +
-                '}';
+    public String leitorBencaoDeus() {
+        if (bencaoDeus) {
+            return "O(a) cavaleiro(a) " + nome + " foi abençoado pelos deuses.";
+        } else {
+            return "O(a) cavaleiro(a) " + nome + " não foi abençoado pelos deuses.";
+        }
     }
 }
 
