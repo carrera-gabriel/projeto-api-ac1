@@ -1,11 +1,6 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-@RequestMapping ("/cavaleiro")
-public abstract class Cavaleiro implements Personagem{
+public abstract class Cavaleiro implements Personagem {
 
     //Atributos
     private String nome;

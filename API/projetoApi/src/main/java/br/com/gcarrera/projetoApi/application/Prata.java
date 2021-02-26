@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
 public class Prata extends Cavaleiro {
 
@@ -33,15 +33,23 @@ public class Prata extends Cavaleiro {
         this.barreiraSom = barreiraSom;
     }
 
-    //Métodos
+    //MÉTODOS
     @Override
     public Double forcaCosmo() {
-        return  + cosmoMedio;
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.25) * 100;
+        if (resultado <= 33) {
+            return resultado;
+        } else {
+            super.setBencaoDeus(true);
+            resultado = resultado + cosmoMedio;
+            return resultado;
+        }
     }
 
     @Override
     public Double poderMach() {
-        return  + barreiraSom;
+        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.25;
+        valorMach = valorMach + barreiraSom;
+        return valorMach;
     }
-
 }

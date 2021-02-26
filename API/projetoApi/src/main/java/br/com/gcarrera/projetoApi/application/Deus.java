@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
 public class Deus implements Personagem {
 
@@ -103,7 +103,7 @@ public class Deus implements Personagem {
     // Métodos
     @Override
     public Double forcaCosmo() {
-        Double resultado = ((batalhasVencidas + guerrasVencidas) / (batalhasPerdidas + guerrasPerdidas) * 1.45) * 100;
+        Double resultado = ((batalhasVencidas + guerrasVencidas) / (batalhasPerdidas + guerrasPerdidas) * 1.55) * 100;
         if (resultado <= 33) {
             return resultado;
         } else {
@@ -118,12 +118,5 @@ public class Deus implements Personagem {
         return ((velocidadeObjeto / velocidadeSom) * 1.55) + nonoSentido;
     }
 
-    public String leitorArtefato() {
-        if (artefato) {
-            return "O(a) Deus(a) " + nome + " está utilizando algum artefato.";
-        } else {
-            return "O(a) Deus(a) " + nome + " está sem artefato.";
-        }
-    }
 
 }

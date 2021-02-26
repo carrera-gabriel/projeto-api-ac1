@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
 public class Bronze extends Cavaleiro {
 
@@ -32,23 +32,24 @@ public class Bronze extends Cavaleiro {
         this.arma = true;
     }
 
-    //Métodos
-    @Override
-    public Double poderMach() {
-        return null;
-    }
-
+    //MÉTODOS
     @Override
     public Double forcaCosmo() {
-        return + cosmoBaixo;
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.35) * 100;
+        if (resultado <= 33) {
+            return resultado;
+        } else {
+            super.setBencaoDeus(true);
+            arma = false;
+            resultado = resultado + cosmoBaixo;
+            return resultado;
+        }
     }
 
-    public String leitorArma() {
-        if (arma) {
-            return "O(a) cavaleiro(a) " + super.getNome() + " tem uma arma.";
-        } else {
-            return "O(a) cavaleiro(a) " + super.getNome() + " não tem uma arma.";
-        }
+    @Override
+    public Double poderMach() {
+        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.15;
+        return valorMach;
     }
 
 }

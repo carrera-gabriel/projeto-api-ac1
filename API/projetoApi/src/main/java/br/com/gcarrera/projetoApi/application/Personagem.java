@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
 public interface Personagem {
 

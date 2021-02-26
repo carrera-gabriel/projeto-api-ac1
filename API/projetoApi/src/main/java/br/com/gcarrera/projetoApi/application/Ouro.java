@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi;
+package br.com.gcarrera.projetoApi.application;
 
 public class Ouro extends Cavaleiro {
 
@@ -36,7 +36,7 @@ public class Ouro extends Cavaleiro {
     //MÉTODOS
     @Override
     public Double forcaCosmo() {
-        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.35) * 100;
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.45) * 100;
         if (resultado <= 33) {
             return resultado;
         } else {
