@@ -103,15 +103,12 @@ public class Deus implements Personagem {
     // Métodos
     @Override
     public Double forcaCosmo() {
-        Double resultado = ((batalhasVencidas + guerrasVencidas) / (batalhasPerdidas + guerrasPerdidas) * 1.35) * 100;
+        Double resultado = ((batalhasVencidas + guerrasVencidas) / (batalhasPerdidas + guerrasPerdidas) * 1.45) * 100;
         if (resultado <= 33) {
-            System.out.println("O Deus(a) " + nome + " está selado, só despertará depois de 200 anos!");
             return resultado;
         } else {
             artefato = true;
             resultado = resultado + nonoSentido;
-            System.out.println("O Deus(a) " + nome + " utilizando um artefato e tem o poder de cosmo equivalente a "
-                    + resultado + "%.");
             return resultado;
         }
     }

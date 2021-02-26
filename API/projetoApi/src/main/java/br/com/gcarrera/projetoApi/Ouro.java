@@ -23,7 +23,7 @@ public class Ouro extends Cavaleiro {
         this.barreiraLuz = barreiraLuz;
     }
 
-    //Construtor
+    //COSNTRUTOR
     public Ouro(String nome, String nacionalidade, String dataNascimento, String constelacao, Integer batalhasVencidas,
                 Integer batalhasPerdidas, Double velocidadeSom, Double velocidadeObjeto, Double setimoSentido,
                 Double barreiraLuz) {
@@ -33,5 +33,24 @@ public class Ouro extends Cavaleiro {
         this.barreiraLuz = barreiraLuz;
     }
 
+    //MÉTODOS
+    @Override
+    public Double forcaCosmo() {
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.35) * 100;
+        if (resultado <= 33) {
+            return resultado;
+        } else {
+            super.setBencaoDeus(true);
+            resultado = resultado + setimoSentido;
+            return resultado;
+        }
+    }
+
+    @Override
+    public Double poderMach() {
+        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.35;
+        valorMach = valorMach + barreiraLuz;
+        return valorMach;
+    }
 
 }

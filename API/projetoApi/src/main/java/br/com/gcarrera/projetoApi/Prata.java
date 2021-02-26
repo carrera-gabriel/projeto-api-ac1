@@ -36,12 +36,12 @@ public class Prata extends Cavaleiro {
     //Métodos
     @Override
     public Double forcaCosmo() {
-        return super.forcaCosmo() + cosmoMedio;
+        return  + cosmoMedio;
     }
 
     @Override
     public Double poderMach() {
-        return super.poderMach() + barreiraSom;
+        return  + barreiraSom;
     }
 
 }

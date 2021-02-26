@@ -34,8 +34,13 @@ public class Bronze extends Cavaleiro {
 
     //Métodos
     @Override
+    public Double poderMach() {
+        return null;
+    }
+
+    @Override
     public Double forcaCosmo() {
-        return super.forcaCosmo() + cosmoBaixo;
+        return + cosmoBaixo;
     }
 
     public String leitorArma() {

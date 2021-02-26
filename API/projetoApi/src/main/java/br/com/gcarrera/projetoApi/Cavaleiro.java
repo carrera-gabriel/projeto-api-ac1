@@ -1,9 +1,10 @@
 package br.com.gcarrera.projetoApi;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+@RequestMapping ("/cavaleiro")
 public abstract class Cavaleiro implements Personagem{
 
     //Atributos
@@ -97,39 +98,12 @@ public abstract class Cavaleiro implements Personagem{
         this.nacionalidade = nacionalidade;
         this.dataNascimento = dataNascimento;
         this.constelacao = constelacao;
-        this.bencaoDeus = true;
+        this.bencaoDeus = false;
         this.batalhasVencidas = batalhasVencidas;
         this.batalhasPerdidas = batalhasPerdidas;
         this.velocidadeSom = velocidadeSom;
         this.velocidadeObjeto = velocidadeObjeto;
     }
 
-    //Métodos
-    @Override
-    public Double forcaCosmo() {
-        Double resultado = ((batalhasVencidas / batalhasPerdidas) * 1.15) * 100;
-        if (resultado <= 33) {
-            System.out.println("O(a) cavaleiro(a) " + nome + " não recebeu ajuda dos deuses!");
-            return resultado;
-        } else {
-            bencaoDeus = true;
-            System.out.println("O(a) cavaleiro(a) " + nome +
-                    " obteve ajuda dos deuses, têm o poder de cosmo equivalente a " + resultado + "%.");
-            return resultado;
-        }
-    }
-
-    @Override
-    public Double poderMach() {
-        return (velocidadeObjeto / velocidadeSom) * 1.35;
-    }
-
-    public String leitorBencaoDeus() {
-        if (bencaoDeus) {
-            return "O(a) cavaleiro(a) " + nome + " foi abençoado pelos deuses.";
-        } else {
-            return "O(a) cavaleiro(a) " + nome + " não foi abençoado pelos deuses.";
-        }
-    }
 }
 
