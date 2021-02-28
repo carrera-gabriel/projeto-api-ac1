@@ -8,11 +8,11 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.gcarrera</groupId>
-	<artifactId>projetoApi</artifactId>
+	<groupId>br.com.bandtec</groupId>
+	<artifactId>saint-seiya-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>projetoApi</name>
-	<description>Continuada AC1</description>
+	<name>saint-seiya-api</name>
+	<description>continuada-01201031</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

@@ -1,13 +1,13 @@
-package br.com.gcarrera.projetoApi.application;
+package br.com.bandtec.saintseiyaapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetoApiApplication {
+public class SaintSeiyaApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetoApiApplication.class, args);
+		SpringApplication.run(SaintSeiyaApiApplication.class, args);
 	}
 
 }

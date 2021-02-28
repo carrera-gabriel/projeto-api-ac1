@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi.application;
+package br.com.bandtec.saintseiyaapi;
 
 public class Prata extends Cavaleiro {
 
@@ -6,31 +6,36 @@ public class Prata extends Cavaleiro {
     private Double cosmoMedio;
     private Double barreiraSom;
 
+    //Construtor
+    public Prata(String nome,
+                 String nacionalidade,
+                 String dataNascimento,
+                 String constelacao,
+                 Integer batalhasVencidas,
+                 Integer batalhasPerdidas,
+                 Double velocidadeSom,
+                 Double velocidadeObjeto,
+                 Double cosmoMedio,
+                 Double barreiraSom) {
+        super(nome,
+                nacionalidade,
+                dataNascimento,
+                constelacao,
+                batalhasVencidas,
+                batalhasPerdidas,
+                velocidadeSom,
+                velocidadeObjeto);
+        this.cosmoMedio = cosmoMedio;
+        this.barreiraSom = barreiraSom;
+    }
+
     //Getters and Setters
     public Double getCosmoMedio() {
         return cosmoMedio;
     }
 
-    public void setCosmoMedio(Double cosmoMedio) {
-        this.cosmoMedio = cosmoMedio;
-    }
-
     public Double getBarreiraSom() {
         return barreiraSom;
-    }
-
-    public void setBarreiraSom(Double barreiraSom) {
-        this.barreiraSom = barreiraSom;
-    }
-
-    //Construtor
-    public Prata(String nome, String nacionalidade, String dataNascimento, String constelacao, Integer batalhasVencidas,
-                 Integer batalhasPerdidas, Double velocidadeSom, Double velocidadeObjeto, Double cosmoMedio,
-                 Double barreiraSom) {
-        super(nome, nacionalidade, dataNascimento, constelacao, batalhasVencidas, batalhasPerdidas, velocidadeSom,
-                velocidadeObjeto);
-        this.cosmoMedio = cosmoMedio;
-        this.barreiraSom = barreiraSom;
     }
 
     //MÉTODOS

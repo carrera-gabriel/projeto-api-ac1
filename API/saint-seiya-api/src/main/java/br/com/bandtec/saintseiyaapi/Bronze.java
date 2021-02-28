@@ -1,4 +1,4 @@
-package br.com.gcarrera.projetoApi.application;
+package br.com.bandtec.saintseiyaapi;
 
 public class Bronze extends Cavaleiro {
 
@@ -6,30 +6,35 @@ public class Bronze extends Cavaleiro {
     private Double cosmoBaixo;
     private Boolean arma;
 
+    //Construtor
+    public Bronze(String nome,
+                  String nacionalidade,
+                  String dataNascimento,
+                  String constelacao,
+                  Integer batalhasVencidas,
+                  Integer batalhasPerdidas,
+                  Double velocidadeSom,
+                  Double velocidadeObjeto,
+                  Double cosmoBaixo) {
+        super(nome,
+                nacionalidade,
+                dataNascimento,
+                constelacao,
+                batalhasVencidas,
+                batalhasPerdidas,
+                velocidadeSom,
+                velocidadeObjeto);
+        this.cosmoBaixo = cosmoBaixo;
+        this.arma = true;
+    }
+
     //Getters and Setters
     public Double getCosmoBaixo() {
         return cosmoBaixo;
     }
 
-    public void setCosmoBaixo(Double cosmoBaixo) {
-        this.cosmoBaixo = cosmoBaixo;
-    }
-
     public Boolean getArma() {
         return arma;
-    }
-
-    public void setArma(Boolean arma) {
-        this.arma = arma;
-    }
-
-    // Construtor
-    public Bronze(String nome, String nacionalidade, String dataNascimento, String constelacao, Integer batalhasVencidas,
-                  Integer batalhasPerdidas, Double velocidadeSom, Double velocidadeObjeto, Double cosmoBaixo) {
-        super(nome, nacionalidade, dataNascimento, constelacao, batalhasVencidas, batalhasPerdidas, velocidadeSom,
-                velocidadeObjeto);
-        this.cosmoBaixo = cosmoBaixo;
-        this.arma = true;
     }
 
     //MÉTODOS
