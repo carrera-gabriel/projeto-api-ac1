@@ -41,13 +41,8 @@ public abstract class Personagem {
     }
 
 
-    public Double forcaCosmo() {
-        Double resultado = 0.0;
-        return resultado = ((batalhasVencidas / batalhasPerdidas) * 1.30) * 100;
-    }
+    public abstract Double getForcaCosmo();
 
-    public Double poderMach() {
-        Double valorMach = 0.0;
-        return valorMach = (getVelocidadeObjeto() / getVelocidadeSom());
-    }
+    public abstract Double getPoderMach();
+
 }

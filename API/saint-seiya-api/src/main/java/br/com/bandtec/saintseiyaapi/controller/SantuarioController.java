@@ -1,7 +1,10 @@
 package br.com.bandtec.saintseiyaapi.controller;
 
 import br.com.bandtec.saintseiyaapi.entities.*;
+import com.sun.org.glassfish.gmbal.ParameterNames;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static br.com.bandtec.saintseiyaapi.injection.InjectGlobal.getLocalidade;
 
@@ -11,52 +14,67 @@ public class SantuarioController {
 
     Localidade localidade = getLocalidade();
 
-    @PostMapping("/deus")
-    public void adicionaDeus(@RequestBody Personagem personagem) {
-        localidade.adicionar(personagem);
+    @GetMapping("/{posicao}")
+    public List<Personagem> buscar(@PathVariable int posicao) {
+        return localidade.getSantuario(posicao).getListaPersonagens();
     }
 
-    @PostMapping("/ouro")
-    public void adicionaOuro(@RequestBody Ouro ouro) {
-        localidade.adicionar(ouro);
+    @PostMapping("/deus/{posicao}")
+    public void adicionaDeus(@RequestBody Deus deus,
+                             @PathVariable int posicao) {
+        localidade.getSantuario(posicao).adicionar(deus);
     }
 
-    @PostMapping("/prata")
-    public void adicionaPrata(@RequestBody Prata prata) {
-        localidade.adicionar(prata);
+    @PostMapping("/ouro/{posicao}")
+    public void adicionaOuro(@RequestBody Ouro ouro,
+                             @PathVariable int posicao) {
+        localidade.getSantuario(posicao).adicionar(ouro);
     }
 
-    @PostMapping("/bronze")
-    public void adicionaBronze(@RequestBody Bronze bronze) {
-        localidade.adicionar(bronze);
+    @PostMapping("/prata/{posicao}")
+    public void adicionaPrata(@RequestBody Prata prata,
+                              @PathVariable int posicao) {
+        localidade.getSantuario(posicao).adicionar(prata);
     }
 
-
-
-    @PutMapping("/deus/{posicao}")
-    public void alteraDeus(@RequestBody Deus deus, int posicao) {
-        localidade.atualizar(deus, posicao);
+    @PostMapping("/bronze/{posicao}")
+    public void adicionaBronze(@RequestBody Bronze bronze,
+                               @PathVariable int posicao) {
+        localidade.getSantuario(posicao).adicionar(bronze);
     }
 
-    @PutMapping("/ouro/{posicao}")
-    public void alteraOuro(@RequestBody Ouro ouro, int posicao) {
-        localidade.atualizar(ouro, posicao);
+    @PutMapping("/deus/{posicaoSantuario}/{posicaoPersonagem}")
+    public void alteraDeus(@RequestBody Deus deus,
+                           @PathVariable int posicaoSantuario,
+                           @PathVariable int posicaoPersonagem) {
+        localidade.getSantuario(posicaoSantuario).atualizar(deus, posicaoPersonagem);
     }
 
-    @PutMapping("/prata/{posicao}")
-    public void alteraPrata(@RequestBody Prata prata, int posicao) {
-        localidade.atualizar(prata, posicao);
+    @PutMapping("/ouro/{posicaoSantuario}/{posicaoPersonagem}")
+    public void alteraOuro(@RequestBody Ouro ouro,
+                           @PathVariable int posicaoSantuario,
+                           @PathVariable int posicaoPersonagem) {
+        localidade.getSantuario(posicaoSantuario).atualizar(ouro, posicaoPersonagem);
     }
 
-    @PutMapping("/bronze/{posicao}")
-    public void alteraBronze(@RequestBody Bronze bronze, int posicao) {
-        localidade.atualizar(bronze, posicao);
+    @PutMapping("/prata/{posicaoSantuario}/{posicaoPersonagem}")
+    public void alteraPrata(@RequestBody Prata prata,
+                            @PathVariable int posicaoSantuario,
+                            @PathVariable int posicaoPersonagem) {
+        localidade.getSantuario(posicaoSantuario).atualizar(prata, posicaoPersonagem);
     }
 
+    @PutMapping("/bronze/{posicaoSantuario}/{posicaoPersonagem}")
+    public void alteraBronze(@RequestBody Bronze bronze,
+                             @PathVariable int posicaoSantuario,
+                             @PathVariable int posicaoPersonagem) {
+        localidade.getSantuario(posicaoSantuario).atualizar(bronze, posicaoPersonagem);
+    }
 
-    @DeleteMapping ("/{posicao}")
-    public void removePersonagem(int posicao) {
-        localidade.remover(posicao);
+    @DeleteMapping("/{posicaoSantuario}/{posicaoPersonagem}")
+    public void removePersonagem(@PathVariable int posicaoSantuario,
+                                 @PathVariable int posicaoPersonagem) {
+        localidade.getSantuario(posicaoSantuario).remover(posicaoPersonagem);
     }
 
 }

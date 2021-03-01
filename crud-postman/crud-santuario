@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "5c716e6b-8635-43c2-9121-660284d5f032",
+		"name": "api Santuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/santuario/bronze/0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/santuario/0/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"0",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/bronze/0/0",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Shiryu\",\r\n    \"batalhasVencidas\": 15,\r\n    \"batalhasPerdidas\": 2,\r\n    \"velocidadeSom\": 15.0,\r\n    \"velocidadeObjeto\": 2.6,\r\n    \"valorBencao\": 11.0,\r\n    \"dataNascimento\": \"30-01-1996\",\r\n    \"constelacao\": \"Dragão\",\r\n    \"cosmoBaixo\": 7.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/bronze/0/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"bronze",
+						"0",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/deus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Hades\",\r\n    \"batalhasVencidas\": 10,\r\n    \"batalhasPerdidas\": 3,\r\n    \"velocidadeSom\": 5.5,\r\n    \"velocidadeObjeto\":5.0,\r\n    \"nonoSentido\": 15.0,\r\n    \"guerrasVencidas\": 2,\r\n    \"guerrasPerdidas\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/deus/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"deus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/ouro/0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Máscara da Morte\",\r\n    \"batalhasVencidas\": 11,\r\n    \"batalhasPerdidas\": 11,\r\n    \"velocidadeSom\": 9.0,\r\n    \"velocidadeObjeto\": 4.6,\r\n    \"valorBencao\": 7.3,\r\n    \"dataNascimento\": \"13-05-2002\",\r\n    \"constelacao\": \"Câncer\",\r\n    \"setimoSentido\": 5.5,\r\n    \"barreiraLuz\": 5.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/ouro/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"ouro",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/bronze/0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Shun\",\r\n    \"batalhasVencidas\": 15,\r\n    \"batalhasPerdidas\": 2,\r\n    \"velocidadeSom\": 15.0,\r\n    \"velocidadeObjeto\": 2.6,\r\n    \"valorBencao\": 11.0,\r\n    \"dataNascimento\": \"30-01-1996\",\r\n    \"constelacao\": \"Andrômeda\",\r\n    \"cosmoBaixo\": 7.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/bronze/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"bronze",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/prata/0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Shaina\",\r\n    \"batalhasVencidas\": 15,\r\n    \"batalhasPerdidas\": 2,\r\n    \"velocidadeSom\": 15.0,\r\n    \"velocidadeObjeto\": 2.6,\r\n    \"valorBencao\": 11.0,\r\n    \"dataNascimento\": \"30-01-1991\",\r\n    \"constelacao\": \"Cobra\",\r\n    \"cosmoMedio\": 7.5,\r\n    \"barreiraSom\": 18.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/prata/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"prata",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/santuario/{posicao}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/santuario/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"santuario",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

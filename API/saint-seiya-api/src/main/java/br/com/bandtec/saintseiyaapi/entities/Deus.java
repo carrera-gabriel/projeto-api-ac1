@@ -9,7 +9,6 @@ public class Deus extends Personagem {
     private Integer guerrasPerdidas;
 
     //Construtor
-
     public Deus(String nome,
                 Integer batalhasVencidas,
                 Integer batalhasPerdidas,
@@ -30,6 +29,23 @@ public class Deus extends Personagem {
         this.guerrasPerdidas = guerrasPerdidas;
     }
 
+    // Métodos
+    @Override
+    public Double getForcaCosmo() {
+        Double resultado = ((super.getBatalhasVencidas() + guerrasVencidas) / (super.getBatalhasPerdidas() + guerrasPerdidas) * 1.30) * 100;
+        if (resultado <= 33) {
+            return resultado;
+        } else {
+            artefato = true;
+            resultado = resultado + nonoSentido;
+            return resultado;
+        }
+    }
+
+    @Override
+    public Double getPoderMach() {
+        return ((super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.15);
+    }
 
     //Getters and setters
     public Boolean getArtefato() {
@@ -46,24 +62,6 @@ public class Deus extends Personagem {
 
     public Integer getGuerrasPerdidas() {
         return guerrasPerdidas;
-    }
-
-    // Métodos
-
-    public Double forcaCosmo() {
-        Double resultado = ((super.getBatalhasVencidas() + guerrasVencidas) / (super.getBatalhasPerdidas() + guerrasPerdidas) * 1.20) * 100;
-        if (resultado <= 33) {
-            return resultado;
-        } else {
-            artefato = true;
-            resultado = resultado + nonoSentido;
-            return resultado;
-        }
-    }
-
-    @Override
-    public Double poderMach() {
-        return ((super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.15);
     }
 
 }

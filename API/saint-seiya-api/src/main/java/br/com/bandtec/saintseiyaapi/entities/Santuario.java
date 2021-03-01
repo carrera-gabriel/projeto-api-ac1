@@ -14,30 +14,14 @@ public class Santuario implements ProjectFlow {
     private Integer demografia;
 
     //Construtor
-    public Santuario(String nomeSantuario, Integer demografia) {
+    public Santuario(String nomeSantuario,
+                     Integer demografia) {
         this.nomeSantuario = nomeSantuario;
         this.demografia = demografia;
         listaPersonagens = new ArrayList<>();
     }
 
-    //Getters and Setters
-    public List<Personagem> getListaPersonagens() {
-        return listaPersonagens;
-    }
-
-    public String getNomeSantuario() {
-        return nomeSantuario;
-    }
-
-    public Integer getDemografia() {
-        return demografia;
-    }
-
     //Métodos
-    public void adicionar(Personagem p) {
-        listaPersonagens.add(p);
-    }
-
     @Override
     public void adicionar(Object classe) {
         if (classe instanceof Bronze)
@@ -51,7 +35,8 @@ public class Santuario implements ProjectFlow {
     }
 
     @Override
-    public void atualizar(Object classe, int posicao) {
+    public void atualizar(Object classe,
+                          int posicao) {
         if (classe instanceof Bronze)
             listaPersonagens.set(posicao, (Bronze) classe);
         else if (classe instanceof Prata)
@@ -67,14 +52,17 @@ public class Santuario implements ProjectFlow {
         listaPersonagens.remove(posicao);
     }
 
-    public void exibePersonagens() {
-        if (listaPersonagens.size() > 0) {
-            for (Personagem p : listaPersonagens) {
-                System.out.println(p);
-            }
-        } else {
-            System.out.println("Nenhum personagem encontrado!");
-        }
+    //Getters and Setters
+    public List<Personagem> getListaPersonagens() {
+        return listaPersonagens;
+    }
+
+    public String getNomeSantuario() {
+        return nomeSantuario;
+    }
+
+    public Integer getDemografia() {
+        return demografia;
     }
 
 

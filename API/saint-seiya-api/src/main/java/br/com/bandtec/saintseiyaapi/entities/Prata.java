@@ -31,18 +31,9 @@ public class Prata extends Cavaleiro {
         this.barreiraSom = barreiraSom;
     }
 
-    //Getters and Setters
-    public Double getCosmoMedio() {
-        return cosmoMedio;
-    }
-
-    public Double getBarreiraSom() {
-        return barreiraSom;
-    }
-
-    //MÉTODOS
+    //Métodos
     @Override
-    public Double forcaCosmo() {
+    public Double getForcaCosmo() {
         Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.06) * 100;
         if (resultado <= 33) {
             return resultado;
@@ -54,9 +45,19 @@ public class Prata extends Cavaleiro {
     }
 
     @Override
-    public Double poderMach() {
+    public Double getPoderMach() {
         Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom());
         valorMach = valorMach + barreiraSom;
         return valorMach;
     }
+
+    //Getters and Setters
+    public Double getCosmoMedio() {
+        return cosmoMedio;
+    }
+
+    public Double getBarreiraSom() {
+        return barreiraSom;
+    }
+
 }

@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "4d8e6a46-060b-4fcb-b71e-0c802f7d2e1f",
+		"name": "api Localidade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/localidade/remover/{posicao}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/localidade/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"localidade",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/localidade/atualizar/{posicao}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeSantuario\": \"Doze Casas\",\r\n    \"demografia\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/localidade/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"localidade",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/localidade/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeSantuario\": \"Olimpo\",\r\n    \"demografia\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/localidade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"localidade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/localidade/buscar/{posicao}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/localidade/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"localidade",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/localidade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/localidade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"localidade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

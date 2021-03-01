@@ -31,18 +31,9 @@ public class Ouro extends Cavaleiro {
         this.barreiraLuz = barreiraLuz;
     }
 
-    //Getters and setters
-    public Double getSetimoSentido() {
-        return setimoSentido;
-    }
-
-    public Double getBarreiraLuz() {
-        return barreiraLuz;
-    }
-
     //MÉTODOS
     @Override
-    public Double forcaCosmo() {
+    public Double getForcaCosmo() {
         Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.08) * 100;
         if (resultado <= 33) {
             return resultado;
@@ -53,11 +44,22 @@ public class Ouro extends Cavaleiro {
         }
     }
 
+
     @Override
-    public Double poderMach() {
+    public Double getPoderMach() {
         Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.05;
         valorMach = valorMach + barreiraLuz;
         return valorMach;
+    }
+
+
+    //Getters and setters
+    public Double getSetimoSentido() {
+        return setimoSentido;
+    }
+
+    public Double getBarreiraLuz() {
+        return barreiraLuz;
     }
 
 }

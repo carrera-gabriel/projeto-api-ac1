@@ -28,18 +28,9 @@ public class Bronze extends Cavaleiro {
         arma = false;
     }
 
-    //Getters and Setters
-    public Double getCosmoBaixo() {
-        return cosmoBaixo;
-    }
-
-    public Boolean getArma() {
-        return arma;
-    }
-
     //MÉTODOS
     @Override
-    public Double forcaCosmo() {
+    public Double getForcaCosmo() {
         Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.05) * 100;
         if (resultado <= 33) {
             return resultado;
@@ -52,9 +43,18 @@ public class Bronze extends Cavaleiro {
     }
 
     @Override
-    public Double poderMach() {
+    public Double getPoderMach() {
         Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom());
         return valorMach;
+    }
+
+    //Getters and Setters
+    public Double getCosmoBaixo() {
+        return cosmoBaixo;
+    }
+
+    public Boolean getArma() {
+        return arma;
     }
 
 }

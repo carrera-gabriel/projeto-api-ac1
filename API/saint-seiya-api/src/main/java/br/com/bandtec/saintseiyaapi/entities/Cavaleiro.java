@@ -66,8 +66,8 @@ public abstract class Cavaleiro extends Personagem {
     }
 
     //Métodos
-    public Double forcaCosmo() {
-        Double resultado = ((super.getBatalhasVencidas()) / (super.getBatalhasPerdidas()) * 1.10) * 100;
+    public Double getForcaCosmo() {
+        Double resultado = ((super.getBatalhasVencidas()) / (super.getBatalhasPerdidas()) * 1.20) * 100;
         if (resultado <= 33) {
             return resultado;
         } else {
@@ -78,7 +78,7 @@ public abstract class Cavaleiro extends Personagem {
     }
 
     @Override
-    public Double poderMach() {
+    public Double getPoderMach() {
         return ((super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.10);
     }
 
