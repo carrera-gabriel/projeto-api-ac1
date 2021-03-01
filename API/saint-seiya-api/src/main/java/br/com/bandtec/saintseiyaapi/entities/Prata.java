@@ -1,4 +1,4 @@
-package br.com.bandtec.saintseiyaapi;
+package br.com.bandtec.saintseiyaapi.entities;
 
 public class Prata extends Cavaleiro {
 
@@ -7,24 +7,26 @@ public class Prata extends Cavaleiro {
     private Double barreiraSom;
 
     //Construtor
+
+
     public Prata(String nome,
-                 String nacionalidade,
-                 String dataNascimento,
-                 String constelacao,
                  Integer batalhasVencidas,
                  Integer batalhasPerdidas,
                  Double velocidadeSom,
                  Double velocidadeObjeto,
+                 Double valorBencao,
+                 String dataNascimento,
+                 String constelacao,
                  Double cosmoMedio,
                  Double barreiraSom) {
         super(nome,
-                nacionalidade,
-                dataNascimento,
-                constelacao,
                 batalhasVencidas,
                 batalhasPerdidas,
                 velocidadeSom,
-                velocidadeObjeto);
+                velocidadeObjeto,
+                valorBencao,
+                dataNascimento,
+                constelacao);
         this.cosmoMedio = cosmoMedio;
         this.barreiraSom = barreiraSom;
     }
@@ -41,7 +43,7 @@ public class Prata extends Cavaleiro {
     //MÉTODOS
     @Override
     public Double forcaCosmo() {
-        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.25) * 100;
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.06) * 100;
         if (resultado <= 33) {
             return resultado;
         } else {
@@ -53,7 +55,7 @@ public class Prata extends Cavaleiro {
 
     @Override
     public Double poderMach() {
-        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.25;
+        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom());
         valorMach = valorMach + barreiraSom;
         return valorMach;
     }

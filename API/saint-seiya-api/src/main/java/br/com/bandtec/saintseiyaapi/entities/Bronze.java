@@ -1,4 +1,4 @@
-package br.com.bandtec.saintseiyaapi;
+package br.com.bandtec.saintseiyaapi.entities;
 
 public class Bronze extends Cavaleiro {
 
@@ -8,24 +8,24 @@ public class Bronze extends Cavaleiro {
 
     //Construtor
     public Bronze(String nome,
-                  String nacionalidade,
-                  String dataNascimento,
-                  String constelacao,
                   Integer batalhasVencidas,
                   Integer batalhasPerdidas,
                   Double velocidadeSom,
                   Double velocidadeObjeto,
+                  Double valorBencao,
+                  String dataNascimento,
+                  String constelacao,
                   Double cosmoBaixo) {
         super(nome,
-                nacionalidade,
-                dataNascimento,
-                constelacao,
                 batalhasVencidas,
                 batalhasPerdidas,
                 velocidadeSom,
-                velocidadeObjeto);
+                velocidadeObjeto,
+                valorBencao,
+                dataNascimento,
+                constelacao);
         this.cosmoBaixo = cosmoBaixo;
-        this.arma = true;
+        arma = false;
     }
 
     //Getters and Setters
@@ -40,12 +40,12 @@ public class Bronze extends Cavaleiro {
     //MÉTODOS
     @Override
     public Double forcaCosmo() {
-        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.35) * 100;
+        Double resultado = ((super.getBatalhasVencidas() / super.getBatalhasPerdidas()) * 1.05) * 100;
         if (resultado <= 33) {
             return resultado;
         } else {
             super.setBencaoDeus(true);
-            arma = false;
+            arma = true;
             resultado = resultado + cosmoBaixo;
             return resultado;
         }
@@ -53,7 +53,7 @@ public class Bronze extends Cavaleiro {
 
     @Override
     public Double poderMach() {
-        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom()) * 1.15;
+        Double valorMach = (super.getVelocidadeObjeto() / super.getVelocidadeSom());
         return valorMach;
     }
 
