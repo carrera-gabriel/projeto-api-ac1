@@ -1,4 +1,4 @@
-![Saint Seiya Wallpaper](https://www.ultimaficha.com.br/wp-content/uploads/2019/12/Os-Cavaleiros-do-Zod%C3%ADaco-Saint-Seiya-Online-780x405.jpg)
+![Saint Seiya Wallpaper](https://img.ibxk.com.br/2017/11/27/27171512909346.jpg?w=1120&h=420&mode=crop&scale=both)
 
 
 ---
